@@ -3,7 +3,7 @@
 #You can set PS1_NAME_COL and PS1_LOC_COL to something like "01;31m" and "01;34m"
 
 if [ -z "$PS1_NAME_COL" ]; then
-  PS1_NAME_COL='01;31m'
+  PS1_NAME_COL='01;32m'
 fi
 
 if [ -z "$PS1_LOC_COL" ]; then
