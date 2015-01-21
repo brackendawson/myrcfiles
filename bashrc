@@ -45,3 +45,5 @@ alias disk-usage-analyzer='baobab'
 if [ `hostname` == "tellybox" ]; then
   alias rx="sudo service lightdm restart"
 fi
+
+alias fucking='sudo'
