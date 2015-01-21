@@ -47,3 +47,5 @@ if [ `hostname` == "tellybox" ]; then
 fi
 
 alias fucking='sudo'
+alias please='sudo'
+alias ffs='sudo !!'
