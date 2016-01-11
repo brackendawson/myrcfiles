@@ -10,3 +10,7 @@ set softtabstop=4
 set listchars=tab:→ 
 set list
 match Error /\s\+$/
+
+"For terrible, terrible python
+:nnoremap <F7> :set noexpandtab noexpandtab shiftwidth=8 softtabstop=8<CR>
+
