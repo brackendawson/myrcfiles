@@ -19,7 +19,7 @@ RC=$?
 
 function parse_git_branch {
   OUTPUT=$(git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/')
-  if [ $OUTPUT ]; then
+  if [ "$OUTPUT" ]; then
     printf " $OUTPUT"
   fi
 }
@@ -49,3 +49,6 @@ fi
 alias fucking='sudo'
 alias please='sudo'
 alias ffs='sudo !!'
+
+#color that works on mac
+alias ls='ls -G'
