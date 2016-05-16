@@ -51,4 +51,4 @@ alias please='sudo'
 alias ffs='sudo !!'
 
 #color that works on mac
-alias ls='ls -G'
+export CLICOLOR=1
