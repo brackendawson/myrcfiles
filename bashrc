@@ -57,5 +57,9 @@ alias fucking='sudo'
 alias please='sudo'
 alias ffs='sudo !!'
 
+alias k='kubectl'
+alias kp='kubectl get pods -o wide'
+alias kk='kubectl exec -ti kafkabroker-1 bash vakcoc'
+
 #color that works on mac
 export CLICOLOR=1
