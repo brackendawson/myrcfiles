@@ -33,7 +33,7 @@ function parse_kube_cluster {
 
 function parse_bluemix_account {
   OUTPUT=$(jq '"\(.Region):\(.Account.Name)"' ~/.bluemix/config.json 2>/dev/null | tr -d '"')
-  if [ "$OUTPUT" ]; then
+  if [ "$(sed -e 's/.*:\(.*\)/\1/' <<< "$OUTPUT")" ]; then
     printf " {$OUTPUT}"
   fi
 }
