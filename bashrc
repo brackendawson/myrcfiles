@@ -25,7 +25,7 @@ function parse_git_branch {
 }
 
 function parse_kube_cluster {
-  OUTPUT=$(env | grep KUBECONFIG | tr '/' '\n' | grep va- | grep -v yml)
+  OUTPUT=$(env | grep KUBECONFIG | grep yml | tr '/' '\n' | grep va- | grep -v yml)
   if [ "$OUTPUT" ]; then
     printf " <$OUTPUT>"
   fi
