@@ -65,8 +65,9 @@ alias please='sudo'
 alias ffs='sudo !!'
 
 alias k='kubectl'
-alias kp='kubectl get pods -o wide'
-alias kk='kubectl exec -ti kafkabroker-1 bash vakcoc'
+alias kp='kubectl get po -o wide'
+alias ks='kubectl -n kube-system'
+alias ksp='kubectl -n kube-system get po -o wide'
 
 alias code='code -r'
 
