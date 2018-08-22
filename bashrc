@@ -68,5 +68,7 @@ alias k='kubectl'
 alias kp='kubectl get pods -o wide'
 alias kk='kubectl exec -ti kafkabroker-1 bash vakcoc'
 
+alias code='code -r'
+
 #color that works on mac
 export CLICOLOR=1
