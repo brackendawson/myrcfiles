@@ -32,7 +32,7 @@ function parse_kube_cluster {
 }
 
 function parse_bluemix_account {
-  OUTPUT=$(jq '"\(.Region):\(.Account.Name)"' ~/.bluemix/config.json 2>/dev/null | tr -d '"')
+  OUTPUT=$(jq '"\(.Account.Name)"' ~/.bluemix/config.json 2>/dev/null | tr -d '"')
   if [ "$(sed -e 's/.*:\(.*\)/\1/' <<< "$OUTPUT")" ]; then
     printf " {$OUTPUT}"
   fi
@@ -68,6 +68,11 @@ alias k='kubectl'
 alias kp='kubectl get po -o wide'
 alias ks='kubectl -n kube-system'
 alias ksp='kubectl -n kube-system get po -o wide'
+alias kr='kubectl -n registry'
+alias krp='kubectl -n registry get po -o wide'
+
+alias iks='ibmcloud ks'
+alias icr='ibmcloud cr'
 
 alias code='code -r'
 
