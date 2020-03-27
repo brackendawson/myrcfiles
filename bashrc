@@ -25,7 +25,7 @@ function parse_git_branch {
 }
 
 function parse_kube_cluster {
-  OUTPUT=$(kubectl config current-context | cut -d '/' -f 1)
+  OUTPUT=$(kubectl config current-context 2>/dev/null | cut -d '/' -f 1)
   if [ "$OUTPUT" ]; then
     printf " <$OUTPUT>"
   fi
