@@ -25,7 +25,7 @@ function parse_git_branch {
 }
 
 function parse_kube_cluster {
-  OUTPUT=$(env | grep KUBECONFIG | cut -d '/' -f 9)
+  OUTPUT=$(kubectl config current-context | cut -d '/' -f 1)
   if [ "$OUTPUT" ]; then
     printf " <$OUTPUT>"
   fi
@@ -95,6 +95,8 @@ alias icr='ibmcloud cr'
 alias wicr='watch -n 30 ibmcloud cr'
 
 alias code='code -r'
+
+export KUBE_EDITOR='code -w'
 
 #color that works on mac
 export CLICOLOR=1
