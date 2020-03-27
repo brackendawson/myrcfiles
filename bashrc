@@ -65,6 +65,7 @@ alias please='sudo'
 alias ffs='sudo !!'
 
 alias k='kubectl'
+complete -o default -o nospace -F __start_kubectl k
 alias wk='watch -n 30 kubectl'
 alias kp='kubectl get po -o wide'
 alias wkp='watch -n 30 kubectl get po -o wide'
