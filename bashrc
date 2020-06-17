@@ -101,3 +101,10 @@ export KUBE_EDITOR='code -w'
 
 #color that works on mac
 export CLICOLOR=1
+
+git() {
+    command git $@
+    if [[ "$1" == "init" && $? -eq 0 ]]; then
+        command git checkout -b default
+    fi
+}
